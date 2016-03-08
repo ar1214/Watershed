@@ -30,5 +30,9 @@
     <string name="AAnextStep">Next Step</string>
     <string name="AAstepTwoTop">Step 2: Take Water Sample</string>
     <string name="AAstepTwoExplain">Dip your water vial into the water source that you are testing.</string>
-
+    <string name="AAstepThreeTop">Step 3: Place strip in vial</string>
+    <string name="AAstepThreeExplain">Place your test strip into the vial that you filled with water.</string>
+    <string name="AAstepFourTop">Step 4: Wait 10 minutes</string>
+    <string name="AAstepFourClock">Time Remaining</string>
+    <string name="AAstepFourExplain">Wait at least 10 minutes before removing your test strip from the water.</string>
 </resources>

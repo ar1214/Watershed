@@ -96,7 +96,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     }
 
     public void onClickToSignUp(View v){
-        startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
+        startActivity(new Intent(LoginActivity.this, StepOneActivity.class));
     }
 
     public void onClickToDataEntry(View v){
