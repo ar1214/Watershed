@@ -13,7 +13,7 @@ public class SignUpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
     }
 
-    public void onClickToDataEntry(View v){
-        startActivity(new Intent(SignUpActivity.this, DataEntry.class));
+    public void onClickToHomePage(View v){
+        startActivity(new Intent(SignUpActivity.this, HomePage.class));
     }
 }

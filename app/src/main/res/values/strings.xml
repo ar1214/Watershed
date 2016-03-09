@@ -30,5 +30,34 @@
     <string name="AAnextStep">Next Step</string>
     <string name="AAstepTwoTop">Step 2: Take Water Sample</string>
     <string name="AAstepTwoExplain">Dip your water vial into the water source that you are testing.</string>
-
+    <string name="AAstepThreeTop">Step 3: Place strip in vial</string>
+    <string name="AAstepThreeExplain">Place your test strip into the vial that you filled with water.</string>
+    <string name="AAstepFourTop">Step 4: Wait 10 minutes</string>
+    <string name="AAstepFourClock">Time Remaining</string>
+    <string name="AAstepFourExplain">Wait at least 10 minutes before removing your test strip from the water.</string>
+    <string name="AAtoInput">Input Data</string>
+    <string name="AAstepFiveTop">Step 5: Determine result</string>
+    <string name="AAstepFiveExplainOne">Negative: The bottom line is darker than the top line.</string>
+    <string name="AAstepFiveExplainTwo">Positive: The top line is darker than the bottom line or the lines are equally dark</string>
+    <string name="AAstepSixTop">Step 6: Take a picture</string>
+    <string name="AAbuttonTakePicture">Take picture</string>
+    <string name="AAbuttonSubmit">SUBMIT</string>
+    <string name="AAradioPositive">Positive</string>
+    <string name="AAradioNegative">Negative</string>
+    <string name="AAradioInvalidUnsure">Invalid/Unsure</string>
+    <string name="AAtoWizard">Use Wizard</string>
+    <string name="AAwizardStartTop">Atrazine Test Strip Tutorial</string>
+    <string name="AAwizardStartExplain">This quick tutorial will walk you through the testing process as well as show you how to determine your test results and send them to the Nebraska Watershed Project team.</string>
+    <string name="AAbuttonStartTutorial">Start Tutorial</string>
+    <string name="AAcongratsTop">CONGRATULATIONS!</string>
+    <string name="AAcongratsExplain">You have successfully submitted your test results to the Nebraska Watershed Project team!</string>
+    <string name="AAbuttonTestAgain">Test Again</string>
+    <string name="AAbuttonShare">SHARE</string>
+    <string name="AAemail">Email Nebraska Watershed Network</string>
+    <string name="AAemailToSendTo">unonwn@unomaha.edu</string>
+    <string name="AAemailTop">Please send us your comments or questions.</string>
+    <string name="AAbuttonSend">Send</string>
+    <string name="AAemailHint">Please enter your message here.</string>
+    <string name="AAemailSubject">Nebraska Watershed Network Citizen Scientist Question/Comment</string>
+    <string name="AAbuttonHome">Back Home</string>
 </resources>

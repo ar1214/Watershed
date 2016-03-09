@@ -7,6 +7,58 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="uno.watershedsprint1.StepCongratsActivity">
+    tools:context="uno.watershedsprint1.StepCongratsActivity"
+    android:background="@color/backgroundPrimary">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/AAcongratsTop"
+        android:id="@+id/textView19"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:textSize="35dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/AAcongratsExplain"
+        android:id="@+id/textView20"
+        android:layout_below="@+id/textView19"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="33dp" />
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/AAbuttonTestAgain"
+        android:id="@+id/button9"
+        android:layout_below="@+id/textView20"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="63dp"
+        android:textColor="@color/backgroundPrimary"
+        android:onClick="onClickToHomePage"
+        android:textSize="21dp"
+        android:background="@drawable/rounded_box" />
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/AAbuttonShare"
+        android:id="@+id/button10"
+        android:textColor="@color/backgroundPrimary"
+        android:textSize="21dp"
+        android:layout_below="@+id/button9"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickToHomePage"
+        android:background="@drawable/rounded_box"
+        android:layout_marginTop="15dp" />
 </RelativeLayout>

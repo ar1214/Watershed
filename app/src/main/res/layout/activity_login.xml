@@ -9,7 +9,10 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="uno.watershedsprint1.LoginActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     android:weightSum="1"
+    android:id="@+id/loginmain"
     android:background="@color/backgroundPrimary">
 
     <!-- Login progress -->
@@ -92,7 +95,7 @@
         android:textStyle="bold"
         android:textSize="21dp"
         android:textIsSelectable="true"
-        android:onClick="onClickToDataEntry"
+        android:onClick="onClickToHomePage"
         android:backgroundTint="#FFFFFF"
         android:layout_marginTop="5dp" />
 

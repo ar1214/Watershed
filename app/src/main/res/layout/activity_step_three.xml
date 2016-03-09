@@ -7,6 +7,53 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="uno.watershedsprint1.StepThreeActivity">
+    tools:context="uno.watershedsprint1.StepThreeActivity"
+    android:background="@color/backgroundPrimary">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/AAstepThreeTop"
+        android:id="@+id/textView8"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="27dp"
+        android:textColor="#FFFFFF" />
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:id="@+id/imageView4"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/strip_in_water"
+        android:layout_below="@+id/textView8"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/AAstepThreeExplain"
+        android:id="@+id/textView9"
+        android:layout_below="@+id/imageView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:textColor="#FFFFFF"
+        android:textSize="27dp"
+        android:textAlignment="center" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/AAnextStep"
+        android:id="@+id/button2"
+        android:layout_gravity="center_horizontal"
+        android:textSize="21dp"
+        android:onClick="onClickToStepFour"
+        android:background="@drawable/rounded_box"
+        android:textColor="@color/backgroundPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="13dp" />
 </RelativeLayout>

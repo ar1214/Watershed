@@ -8,6 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context="uno.watershedsprint1.LoginActivity"
     android:weightSum="1"
     android:background="@color/backgroundPrimary">
@@ -180,7 +182,7 @@
         android:textStyle="bold"
         android:textSize="23dp"
         android:textIsSelectable="true"
-        android:onClick="onClickToDataEntry"
+        android:onClick="onClickToHomePage"
         android:backgroundTint="@color/backgroundPrimary"
         android:paddingTop="20dp" />
 

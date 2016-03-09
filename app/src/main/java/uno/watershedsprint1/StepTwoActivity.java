@@ -13,7 +13,7 @@ public class StepTwoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_step_two);
     }
 
-    public void onClickToStepTwo(View v){
+    public void onClickToStepThree(View v){
         startActivity(new Intent(StepTwoActivity.this, StepThreeActivity.class));
     }
 }

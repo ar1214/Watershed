@@ -5,16 +5,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class StepFiveActivity extends AppCompatActivity {
+public class WizardStart extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_step_five);
+        setContentView(R.layout.activity_wizard_start);
     }
 
-
-    public void onClickToStepSix(View v){
-        startActivity(new Intent(StepFiveActivity.this, StepSixActivity.class));
+    public void onClickToStepOne(View v){
+        startActivity(new Intent(WizardStart.this, StepOneActivity.class));
     }
 }

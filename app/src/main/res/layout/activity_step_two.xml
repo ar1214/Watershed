@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView3"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/waterSample"
+        android:src="@drawable/water_sample"
         android:background="@drawable/rounded_box"
         android:cropToPadding="false"
         android:layout_marginTop="35dp" />
@@ -47,7 +47,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/AAnextStep"
-        android:id="@+id/button"
+        android:id="@+id/buttonStep2"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="40dp"
         android:textSize="21dp"
