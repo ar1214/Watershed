@@ -7,6 +7,72 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="uno.watershedsprint1.StepFiveActivity">
+    tools:context="uno.watershedsprint1.StepFiveActivity"
+    android:background="@color/backgroundPrimary">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/AAstepFiveTop"
+        android:id="@+id/textView13"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="27dp"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/AAstepFiveExplainOne"
+        android:id="@+id/textView14"
+        android:layout_below="@+id/textView13"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:textSize="27dp"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center" />
+
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView6"
+        android:src="@drawable/negative_strip"
+        android:layout_below="@+id/textView14"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/AAstepFiveExplainTwo"
+        android:id="@+id/textView15"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:textSize="27dp"
+        android:layout_below="@+id/imageView6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView7"
+        android:src="@drawable/positive_strip"
+        android:layout_below="@+id/textView15"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/AAnextStep"
+        android:id="@+id/button6"
+        android:textSize="21dp"
+        android:onClick="onClickToStepSix"
+        android:background="@drawable/rounded_box"
+        android:textColor="@color/backgroundPrimary"
+        android:layout_below="@+id/imageView7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp" />
 </RelativeLayout>

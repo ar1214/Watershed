@@ -100,6 +100,10 @@ public class DataEntry extends AppCompatActivity {
 
     }
 
+    public void onClickToHomePage(View v){
+        startActivity(new Intent(DataEntry.this, HomePage.class));
+    }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults){
         switch (requestCode){
@@ -177,7 +181,7 @@ public class DataEntry extends AppCompatActivity {
             String picturePath = c.getString(columnindex);
             c.close();
             Bitmap thumbnail = (BitmapFactory.decodeFile(picturePath));
-            Log.w("path of image from gallery.....", picturePath + "");
+            Log.w("image path from gallery", picturePath + "");
             viewImage.setImageBitmap(thumbnail);
 
         }
