@@ -43,7 +43,7 @@ public class emailActivity extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 if(!hasFocus){
-                    hideKeyboard(v);
+                    hideKeyboard();
                 }
             }
         });
@@ -64,7 +64,7 @@ public class emailActivity extends AppCompatActivity {
         startActivity(Intent.createChooser(emailIntent, "Email"));
     }
 
-    private void hideKeyboard(View view) {
+    private void hideKeyboard() {
         InputMethodManager imm = (InputMethodManager)getSystemService(Activity.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(message.getWindowToken(), 0);
     }
