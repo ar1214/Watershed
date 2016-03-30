@@ -7,89 +7,163 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="uno.watershedsprint1.StepSixActivity"
-    android:background="@color/backgroundPrimary">
+    android:background="@color/backgroundPrimary"
+    tools:context="uno.watershedsprint1.StepSixActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/AAstepSixTop"
-        android:id="@+id/textView16"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Test Results"
+        android:id="@+id/test_toggle_label"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="27dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:textColor="#FFFFFF" />
-    <ImageView
-        android:src="@android:drawable/ic_menu_camera"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:id="@+id/imageView2"
-        android:adjustViewBounds="true"
-        android:layout_marginTop="42dp"
-        android:layout_below="@+id/textView16"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:text="@string/AAbuttonTakePicture"
-        android:id="@+id/takePicture2"
-        android:layout_below="@+id/imageView2"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/rounded_box"
-        android:textColor="@color/backgroundPrimary"
-        android:textSize="21dp" />
 
     <RadioGroup
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/takePicture2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="10dp">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/test_toggle_label"
+        android:layout_toRightOf="@+id/test_toggle_label"
+        android:id="@+id/radioGroup"
+        android:layout_above="@+id/latitude">
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/AAradioPositive"
-            android:id="@+id/radioButton3"
+            android:text="Positive"
+            android:id="@+id/radioButton"
+            android:checked="false"
             android:textColor="#FFFFFF"
+            android:button="@drawable/abc_btn_radio_material"
             android:buttonTint="#FFFFFF"
             android:textSize="20dp" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/radioButton4"
+            android:text="Negative"
+            android:id="@+id/radioButton2"
             android:checked="false"
-            android:text="@string/AAradioNegative"
             android:textColor="#FFFFFF"
-            android:textSize="20dp"
-            android:buttonTint="#FFFFFF" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/AAradioInvalidUnsure"
-            android:id="@+id/radioButton5"
+            android:clickable="true"
             android:buttonTint="#FFFFFF"
-            android:textColor="#FFFFFF"
             android:textSize="20dp" />
 
     </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Latitude"
+        android:id="@+id/textView"
+        android:layout_marginTop="78dp"
+        android:layout_below="@+id/test_toggle_label"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/latitude"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/rounded_box" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Longitude"
+        android:id="@+id/textView2"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/latitude"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/longitude"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/rounded_box" />
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:layout_below="@+id/longitude"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/space" />
+    <ImageView
+        android:src="@android:drawable/ic_menu_camera"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView1"
+        android:adjustViewBounds="true"
+        android:layout_below="@+id/space"
+        android:layout_centerHorizontal="true" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="   Take a picture of your test strip   "
+        android:id="@+id/buttonTakePic"
+        android:textColor="@color/backgroundPrimary"
+        android:background="@drawable/rounded_box"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="   Get Location   "
+        android:id="@+id/buttonLocation"
+        android:background="@drawable/rounded_box"
+        android:layout_below="@+id/latitude"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+
+        android:textColor="@color/backgroundPrimary" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:id="@+id/editText3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/buttonLocation"
+        android:layout_alignEnd="@+id/buttonLocation"
+        android:layout_below="@+id/buttonTakePic"
+        android:background="#FFFFFF"
+        android:layout_marginTop="20dp"
+        android:hint="Comments here"
+        android:gravity="top"
+        android:layout_above="@+id/button11"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="false"
+        android:layout_marginBottom="20dp" />
 
     <Button
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:text="@string/AAbuttonSubmit"
-        android:id="@+id/button8"
+        android:id="@+id/button11"
+        android:background="@drawable/rounded_box"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="24dp"
-        android:textSize="27dp"
-        android:onClick="onClickToStepCongrats"
-        android:textColor="@color/backgroundPrimary"
-        android:background="@drawable/rounded_box" />
+        android:onClick="onClickToHomePage"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

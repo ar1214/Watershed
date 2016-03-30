@@ -16,9 +16,12 @@
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="hint_first_name">First Name</string>
     <string name="hint_last_name">Last Name</string>
-    <string name="hint_address">Address</string>
+    <string name="hint_address">Street Address</string>
+    <string name="hint_city">City</string>
+    <string name="hint_state">State</string>
     <string name="hint_affiliation">Affiliation</string>
     <string name="hint_password">Password</string>
+    <string name="hint_zip">Zip Code</string>
     <string name="hint_verify_password">Verify Password</string>
     <string name="AAopenCamera">Open Camera</string>
     <string name="AAcreateAccount">Create Account</string>
@@ -55,9 +58,10 @@
     <string name="AAbuttonShare">SHARE</string>
     <string name="AAemail">Email Nebraska Watershed Network</string>
     <string name="AAemailToSendTo">unonwn@unomaha.edu</string>
-    <string name="AAemailTop">Please send us your comments or questions.</string>
+    <string name="AAemailTop">Please send us your comments or questions.\nIf sent here from creating a new account or logging in, there is a problem, please report your findings manually</string>
     <string name="AAbuttonSend">Send</string>
     <string name="AAemailHint">Please enter your message here.</string>
     <string name="AAemailSubject">Nebraska Watershed Network Citizen Scientist Question/Comment</string>
     <string name="AAbuttonHome">Back Home</string>
+    <string name="SignInExplain">If successful, you will be returned to sign in</string>
 </resources>
