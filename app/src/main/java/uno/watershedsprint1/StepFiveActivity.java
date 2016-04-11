@@ -15,6 +15,6 @@ public class StepFiveActivity extends AppCompatActivity {
 
 
     public void onClickToStepSix(View v){
-        startActivity(new Intent(StepFiveActivity.this, StepSixActivity.class));
+        startActivity(new Intent(StepFiveActivity.this, DataEntry.class));
     }
 }

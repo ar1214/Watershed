@@ -24,5 +24,7 @@ public class HomePage extends AppCompatActivity {
     public void onClickToEmail(View v){
         startActivity(new Intent(HomePage.this, emailActivity.class));
     }
-
+    public void onClickToMyData(View v){
+        startActivity(new Intent(HomePage.this, MyDataActivity.class));
+    }
 }

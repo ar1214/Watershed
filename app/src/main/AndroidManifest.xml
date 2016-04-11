@@ -11,8 +11,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.hardware.camera" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -29,42 +28,56 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUpActivity"
+        <activity
+            android:name=".SignUpActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".DataEntry"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DataEntry"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".StepOneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StepOneActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".StepTwoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StepTwoActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".StepThreeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StepThreeActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".StepFourActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StepFourActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".StepFiveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StepFiveActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".StepSixActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StepSixActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".StepCongratsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StepCongratsActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".HomePage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HomePage"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".WizardStart"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WizardStart"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".emailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".emailActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
+        <activity android:name=".Projects_Activity" />
+        <activity android:name=".MyDataActivity"></activity>
     </application>
 
 </manifest>

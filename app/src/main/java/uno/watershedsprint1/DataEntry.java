@@ -162,6 +162,10 @@ public class DataEntry extends AppCompatActivity {
                 String latitudeS = latitude.getText().toString();
                 String longitudeS = longitude.getText().toString();
                 String commentS = comment.getText().toString();
+                if (commentS.length() <= 3)
+                {
+                    commentS = "invalid comment";
+                }
 
                 /// make params array
                 String[] params = {result, latitudeS, longitudeS,commentS };
@@ -205,15 +209,15 @@ public class DataEntry extends AppCompatActivity {
                 String tok = g.getToken();
                 Log.d("WHAT IS BEING SENT", params[0]+" "+params[1]+" "+params[2]+ " "+params[3]+ " "+tok);
 
-                /*RequestBody formBody = new FormEncodingBuilder()
-                        .add("projectid", "1")
+                RequestBody formBody = new FormEncodingBuilder()
+                        .add("projectid", Integer.toString(g.getId()))
                         .add("result", params[0])
                         .add("gps_lat",params[1])
                         .add("gps_long",params[2])
                         .add("comments", params[3])
-                        .build();*/
+                        .build();
 
-                RequestBody formBody = RequestBody.create(mediaType, "{\r\n   \"projectid\":\"1\",\r\n   \"result\":\""+params[0]+"\",\r\n   \"gps_lat\":\""+params[1]+"\",\r\n   \"gps_long\":\""+params[2]+"\",\r\n   \"comments\":\""+params[3]+"\"\r\n}");
+                //RequestBody formBody = RequestBody.create(mediaType, "{\r\n   \"projectid\":\"2\",\r\n   \"result\":\""+params[0]+"\",\r\n   \"gps_lat\":\""+params[1]+"\",\r\n   \"gps_long\":\""+params[2]+"\",\r\n   \"comments\":\""+params[3]+"\"\r\n}");
                 //build request
                 Request request = new Request.Builder()
                         .url("http://newatershed.net/api/datapoints/add")
