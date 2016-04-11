@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+        android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <Button
+        android:id="@+id/back_home_button"
+        android:text="Back Home"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickToHomePage"
+        android:background="@drawable/rounded_box"
+        android:textColor="@color/backgroundPrimary"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Previous Projects Contributed To:"
+        android:textColor="#FFFFFF"
+        android:background="@color/backgroundPrimary"
+        android:clickable="true"
+        android:textSize="20dp" />
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:textColor="#FFFFFF"
+        android:layout_height="fill_parent"
+        android:drawSelectorOnTop="false"
+        android:background="@color/backgroundPrimary"
+        android:textFilterEnabled="false"
+        android:paddingTop="25dp" />
+</LinearLayout>

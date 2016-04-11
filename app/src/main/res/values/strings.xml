@@ -64,4 +64,5 @@
     <string name="AAemailSubject">Nebraska Watershed Network Citizen Scientist Question/Comment</string>
     <string name="AAbuttonHome">Back Home</string>
     <string name="SignInExplain">If successful, you will be returned to sign in</string>
+    <string name="AAmyDataButton">My Data</string>
 </resources>

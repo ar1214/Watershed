@@ -159,7 +159,7 @@ public class LoginActivity extends AppCompatActivity  {
                 tok = tok.substring(1,tok.length()-1);
                 //Log.d("TOKEN ATTEMPT", tok);
                 g.setToken(tok);
-                //Log.d("did it make it?????????", g.getToken());
+                Log.d("did it make it?????????", g.getToken());
 
                 //Go through json to find token, set it to Global token using singleton class Globals
 
@@ -178,7 +178,7 @@ public class LoginActivity extends AppCompatActivity  {
 
 
             if (worked) {
-                startActivity(new Intent(LoginActivity.this, HomePage.class));
+                startActivity(new Intent(LoginActivity.this, Projects_Activity.class));
                 //send to new page
                 return (null);
             }
