@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -50,7 +51,14 @@ public class emailActivity extends AppCompatActivity {
     }
 
     public void onClickToHomePage(View v){
-        startActivity(new Intent(emailActivity.this, HomePage.class));
+        Globals g = Globals.getInstance();
+        Log.d("Token is--------", g.getToken());
+        if (!g.getToken().contains("Invalid")){
+            startActivity(new Intent(emailActivity.this, HomePage.class));
+        }
+        else{
+            startActivity(new Intent(emailActivity.this, LoginActivity.class));
+        }
     }
 
     protected void sendEmail(String myMessage) {

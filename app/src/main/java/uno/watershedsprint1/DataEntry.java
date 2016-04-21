@@ -87,6 +87,9 @@ public class DataEntry extends AppCompatActivity {
             public void onLocationChanged(Location location) {
                 latTextView.setText(""+location.getLatitude());
                 longTextView.setText(""+location.getLongitude());
+                try {
+                    locationManager.removeUpdates(locationListener);
+                }catch(SecurityException E){E.printStackTrace();}
             }
 
             @Override
@@ -245,6 +248,10 @@ public class DataEntry extends AppCompatActivity {
 
 
                 if (worked) {
+                    try {
+                        locationManager.removeUpdates(locationListener);
+                    }catch(SecurityException E){E.printStackTrace();}
+
                     startActivity(new Intent(DataEntry.this, StepCongratsActivity.class));
                     //send to new page
                     return (null);
@@ -287,7 +294,7 @@ public class DataEntry extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    locationManager.requestLocationUpdates("gps", 5000, 0, locationListener);
+                    locationManager.requestLocationUpdates("gps", 0, 0, locationListener);
                 }catch(SecurityException e){e.printStackTrace();}
             }
         });

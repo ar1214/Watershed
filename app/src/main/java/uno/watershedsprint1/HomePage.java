@@ -27,4 +27,9 @@ public class HomePage extends AppCompatActivity {
     public void onClickToMyData(View v){
         startActivity(new Intent(HomePage.this, MyDataActivity.class));
     }
+    public void onClickToLogOut(View v){
+        Globals g = Globals.getInstance();
+        g.setToken("z");
+        startActivity(new Intent(HomePage.this, LoginActivity.class));
+    }
 }

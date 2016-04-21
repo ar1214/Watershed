@@ -3,10 +3,13 @@ package uno.watershedsprint1;
 //import android.animation.Animator;
 //import android.animation.AnimatorListenerAdapter;
 //import android.annotation.TargetApi;
+import android.app.ActionBar;
 import android.app.Activity;
 //import android.app.ProgressDialog;
 import android.content.Intent;
 //import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Looper;
 //import android.support.annotation.NonNull;
 //import android.support.design.widget.Snackbar;
@@ -153,6 +156,13 @@ protected Boolean worked = false;
         LinearLayout layout = (LinearLayout)findViewById(R.id.button_list);
         myResponse = Result;
         try{
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+            );
+            params.setMargins(0,10,0,10);
+            Drawable d = getResources().getDrawable(R.drawable.rounded_box);
+
             //send
 
             //get response in string
@@ -169,8 +179,13 @@ protected Boolean worked = false;
             for (int i=0; i<projectArray.length(); i++)
             {
                 final int j = i;
+
                 projectNums[i] = projectArray.getJSONObject(i).getInt("projectid");
                 projButtons[i] = new Button(this);
+                projButtons[i].setLayoutParams(params);
+                projButtons[i].setBackground(d);
+                projButtons[i].setTextColor(Color.parseColor("#36648b"));
+
                 projButtons[i].setText(projectArray.getJSONObject(i).getString("name"));
                 projButtons[i].setOnClickListener(new View.OnClickListener(){
 

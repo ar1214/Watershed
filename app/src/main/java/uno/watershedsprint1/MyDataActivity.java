@@ -74,7 +74,7 @@ public class MyDataActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_data);
-        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, listItems);
+        adapter = new ArrayAdapter<String>(this,R.layout.my_text_view, listItems);
         setListAdapter(adapter);
 
 
@@ -102,7 +102,7 @@ public class MyDataActivity extends ListActivity {
 
             //build request
             Request request = new Request.Builder()
-                    .url("http://newatershed.net/api/projects/recent")
+                    .url("http://newatershed.net/api/datapoints/getuser")
                     .addHeader("content-type", "application/json")
                     .addHeader("accept", "application/json")
                     .addHeader("Authorization", g.getToken())
@@ -172,18 +172,37 @@ public class MyDataActivity extends ListActivity {
             JSONObject Jobject = new JSONObject(jsonData);
 
             //get projects array then start chopping
-            JSONArray projectArray = Jobject.getJSONArray("contributions");
+            JSONArray projectArray = Jobject.getJSONArray("datapoints");
 
 
 
-            for (int i=0; i<projectArray.length(); i++)
+            for (int i=projectArray.length()-1; i>=0; i--)
             {
 
-                String temp = projectArray.getJSONObject(i).getString("Projects");
-                JSONObject jsonTemp = new JSONObject(temp);
-                Log.d("Did it get here 333", temp);
+                JSONObject jsonTemp = projectArray.getJSONObject(i);
+                /*JSONObject jsonTemp = new JSONObject(temp);
+                Log.d("Did it get here 333", temp);*/
+                String working = (jsonTemp.getString("project"));
+                working = working.substring(9,working.length()-2);
+                listItems.add("Project: "+working);
+                working = (jsonTemp.getString("result"));
+                if (working.equals("yes")){
+                working = "Positive";
+            }else if (working.equals("no")){
+                    working = "Negative";
+                }
+                else{
+                    working = "Not Conclusive";
+                }
+                listItems.add(working);
+                listItems.add("Location (GPS):");
+                working = (jsonTemp.getString("gps_lat"));
+                listItems.add("\t\t\t\t\t\t"+working);
+                working = (jsonTemp.getString("gps_long"));
+                listItems.add("\t\t\t\t\t"+working);
+                listItems.add(" ");
 
-                listItems.add(jsonTemp.getString("name"));
+
 
                 adapter.notifyDataSetChanged();
 
