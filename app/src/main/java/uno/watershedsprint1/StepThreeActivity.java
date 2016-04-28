@@ -7,6 +7,7 @@ import android.view.View;
 
 public class StepThreeActivity extends AppCompatActivity {
 
+    //just navigation
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

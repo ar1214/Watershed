@@ -1,82 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <LinearLayout
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation = "vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="uno.watershedsprint1.HomePage"
-    android:background="@color/backgroundPrimary">
-
+    android:background="@color/backgroundPrimary"
+    android:weightSum="2">
+<!--
     <ImageView
-        android:layout_width="147dp"
-        android:layout_height="189dp"
+        android:layout_width="137dp"
+        android:layout_height="176dp"
         android:id="@+id/imageView5"
         android:src="@drawable/nwnlogo_transparent"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal" />
+-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/textView19"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/white"
+        android:clickable="false"
+        android:layout_marginTop="100dp" />
+
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:text="@string/AAtoInput"
+        android:text="My Projects"
         android:id="@+id/button3"
-        android:textColor="@color/backgroundPrimary"
-        android:background="@drawable/rounded_box"
-        android:onClick="onClickToDataEntry"
+        android:textColor="@android:color/white"
+        android:background="@color/backgroundPrimary"
+        android:onClick="onClickToProjects"
+
+        android:drawableLeft="@drawable/wave5"
         android:textSize="21dp"
         android:textStyle="bold"
-        android:layout_marginLeft="51dp"
-        android:layout_marginStart="51dp"
-        android:layout_alignTop="@+id/button4"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
+        android:shadowColor="@color/backgroundPrimary"
+        android:singleLine="false"
+        android:backgroundTint="@color/backgroundPrimary"
+        android:textAlignment="center"
+        android:gravity="center_vertical"
+        android:clickable="true" />
 
-    <Button
-        android:layout_width="100dp"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/textView16"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/white"
+        android:clickable="false" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="@string/AAmyDataButton"
+        android:id="@+id/button8"
+        android:background="@color/backgroundPrimary"
+        android:drawableLeft="@drawable/search"
+        android:textSize="21dp"
+        android:textColor="@android:color/white"
+        android:fillViewport="true"
+        android:onClick="onClickToMyData"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:clickable="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/textView17"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/white"
+        android:clickable="false" />
+
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="100dp"
         android:text="@string/AAtoWizard"
         android:id="@+id/button4"
         android:textSize="21dp"
         android:onClick="onClickToWizardStart"
         android:textStyle="bold"
-        android:textColor="@color/backgroundPrimary"
-        android:background="@drawable/rounded_box"
-        android:layout_marginLeft="31dp"
-        android:layout_marginStart="31dp"
-        android:layout_below="@+id/imageView5"
-        android:layout_toRightOf="@+id/button3"
-        android:layout_toEndOf="@+id/button3" />
+        android:textColor="@android:color/white"
+        android:background="@color/backgroundPrimary"
+        android:fillViewport="true"
+        android:drawableLeft="@drawable/wizard"
+        android:layout_gravity="right"
+        android:gravity="center_vertical|center_horizontal"
+        android:clickable="true" />
 
-    <Button
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:text="@string/AAemail"
-        android:id="@+id/button12"
-        android:background="@drawable/rounded_box"
-        android:textColor="@color/backgroundPrimary"
-        android:textSize="18dp"
-        android:onClick="onClickToEmail"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:text="@string/AAmyDataButton"
-        android:id="@+id/button8"
-        android:background="@drawable/rounded_box"
-        android:layout_below="@+id/button4"
-        android:layout_alignLeft="@+id/button4"
-        android:layout_alignStart="@+id/button4"
-        android:layout_marginTop="20dp"
-        android:textSize="21dp"
-        android:textColor="@color/backgroundPrimary"
-        android:onClick="onClickToMyData"
-        android:textStyle="bold" />
+    <TextView
+        android:layout_width="366dp"
+        android:layout_height="1dp"
+        android:id="@+id/textView18"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/white"
+        android:clickable="false" />
 
+
+    <!--
     <Button
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -90,4 +131,24 @@
         android:layout_alignTop="@+id/button8"
         android:layout_toLeftOf="@+id/button4"
         android:layout_toStartOf="@+id/button4" />
+        -->
+
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:text="@string/AAemail"
+        android:id="@+id/button12"
+        android:background="@color/backgroundPrimary2"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:onClick="onClickToEmail"
+        android:layout_alignParentBottom="true"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="37dp"
+        android:clickable="true" />
+
 </RelativeLayout>

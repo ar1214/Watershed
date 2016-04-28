@@ -3,7 +3,7 @@
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
+    <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
@@ -31,24 +31,27 @@
     <string name="AAatrazineTestStrips">Atrazine Test Strips</string>
     <string name="AAvialsLable">Vials to hold water</string>
     <string name="AAnextStep">Next Step</string>
-    <string name="AAstepTwoTop">Step 2: Take Water Sample</string>
-    <string name="AAstepTwoExplain">Dip your water vial into the water source that you are testing.</string>
-    <string name="AAstepThreeTop">Step 3: Place strip in vial</string>
-    <string name="AAstepThreeExplain">Place your test strip into the vial that you filled with water.</string>
-    <string name="AAstepFourTop">Step 4: Wait 10 minutes</string>
+    <string name="AAstepTwoTop">Step 2: Collect water sample</string>
+    <string name="AAstepTwoExplain">Gather water in your container from the water source you are testing.</string>
+    <string name="AAstepThreeTop">Step 3: Place water sample into test vial</string>
+    <string name="AAstepThreeExplain">Using the dropper, place your water sample into the test vial. Be careful to use only one dropper full of water.</string>
+    <string name="AAnewStepFourTop">Step 4: Place the test strip in the vial</string>
+    <string name="AAnewStepFourExplain">Swirl the water in the vial gently for several seconds and then place it on a flat surface. Place the test strips in the vial with the arrows pointing down.</string>
+    <string name="AAstepFourTop">Step 5: Wait 10 minutes</string>
     <string name="AAstepFourClock">Time Remaining</string>
-    <string name="AAstepFourExplain">Wait at least 10 minutes before removing your test strip from the water.</string>
+    <string name="AAstepFourExplain">Do not disturb the strips or vial during this time. Blue lines will appear on the strips.</string>
     <string name="AAtoInput">Input Data</string>
-    <string name="AAstepFiveTop">Step 5: Determine result</string>
+    <string name="AAstepFiveTop">Step 6: Determine result</string>
+    <string name="AAnewStepSixLine">Take the strip out and read the results.</string>
     <string name="AAstepFiveExplainOne">Negative: The bottom line is darker than the top line.</string>
-    <string name="AAstepFiveExplainTwo">Positive: The top line is darker than the bottom line or the lines are equally dark</string>
+    <string name="AAstepFiveExplainTwo">Positive: The top line is darker than the bottom line or the lines are equally dark.</string>
     <string name="AAstepSixTop">Step 6: Take a picture</string>
     <string name="AAbuttonTakePicture">Take picture</string>
     <string name="AAbuttonSubmit">SUBMIT</string>
     <string name="AAradioPositive">Positive</string>
     <string name="AAradioNegative">Negative</string>
     <string name="AAradioInvalidUnsure">Invalid/Unsure</string>
-    <string name="AAtoWizard">Use Wizard</string>
+    <string name="AAtoWizard">Test Strip Wizard</string>
     <string name="AAwizardStartTop">Atrazine Test Strip Tutorial</string>
     <string name="AAwizardStartExplain">This quick tutorial will walk you through the testing process as well as show you how to determine your test results and send them to the Nebraska Watershed Project team.</string>
     <string name="AAbuttonStartTutorial">Start Tutorial</string>
@@ -56,7 +59,7 @@
     <string name="AAcongratsExplain">You have successfully submitted your test results to the Nebraska Watershed Project team!</string>
     <string name="AAbuttonTestAgain">Test Again</string>
     <string name="AAbuttonShare">SHARE</string>
-    <string name="AAemail">Email Nebraska Watershed Network</string>
+    <string name="AAemail">Contact Us</string>
     <string name="AAemailToSendTo">unonwn@unomaha.edu</string>
     <string name="AAemailTop">Please send us your comments or questions.\nIf sent here from creating a new account or logging in, there is a problem, please report your findings manually</string>
     <string name="AAbuttonSend">Send</string>
@@ -65,4 +68,11 @@
     <string name="AAbuttonHome">Back Home</string>
     <string name="SignInExplain">If successful, you will be returned to sign in</string>
     <string name="AAmyDataButton">My Data</string>
+    <string name="AAsteponeexplain">Open the pesticide strip pouch and remove the contents. The packet should contain a test vial, a dropper pipette, one atrazine test strip, and a desiccant (to be discarded).</string>
+    //array for multistate toggle button
+    <string-array name="result_options">
+        <item>Positive</item>
+        <item>Negative</item>
+        <item>Inconclusive\t</item>
+    </string-array>
 </resources>

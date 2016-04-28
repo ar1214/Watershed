@@ -105,12 +105,7 @@ public class LoginActivity extends AppCompatActivity  {
 
     private class SendTask extends AsyncTask<String, Void, String> {
         Boolean worked = false;
-        //progressDialog a wip
-        /*ProgressDialog authProgressDialog;
-        protected void onPreExectute(){
-            authProgressDialog.setTitle("Please wait");
-            authProgressDialog.show();
-        }*/
+
 
         @Override
         protected String doInBackground(String... params){
@@ -178,25 +173,16 @@ public class LoginActivity extends AppCompatActivity  {
 
 
             if (worked) {
-                startActivity(new Intent(LoginActivity.this, Projects_Activity.class));
                 //send to new page
+                startActivity(new Intent(LoginActivity.this, Projects_Activity.class));
                 return (null);
             }
             else{
+                //send email THIS SHOULD BE ERROR SCREEN!!
                 startActivity(new Intent(LoginActivity.this, emailActivity.class));
                 return (null);
             }
         }catch(Exception e){e.printStackTrace();}return (null);}
-
-
-
-        //wip
-       /* protected void onPostExecute(Void result){
-            authProgressDialog.dismiss();
-        }*/
-
-
-
 
     }
 
@@ -211,11 +197,12 @@ public class LoginActivity extends AppCompatActivity  {
         startActivity(new Intent(LoginActivity.this, HomePage.class));
     }
 
-
+    //as before, was working on keyboard issues
+    /*
     public void hideKeyboard(View view) {
         InputMethodManager inputMethodManager =(InputMethodManager)getSystemService(Activity.INPUT_METHOD_SERVICE);
         inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
-    }
+    }*/
 
 
 

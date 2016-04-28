@@ -39,7 +39,7 @@
     <Button
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="@string/AAbuttonTestAgain"
+        android:text="Home"
         android:id="@+id/button9"
         android:layout_below="@+id/textView20"
         android:layout_centerHorizontal="true"
@@ -49,16 +49,5 @@
         android:textSize="21dp"
         android:background="@drawable/rounded_box" />
 
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="@string/AAbuttonShare"
-        android:id="@+id/button10"
-        android:textColor="@color/backgroundPrimary"
-        android:textSize="21dp"
-        android:layout_below="@+id/button9"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClickToHomePage"
-        android:background="@drawable/rounded_box"
-        android:layout_marginTop="15dp" />
+
 </RelativeLayout>

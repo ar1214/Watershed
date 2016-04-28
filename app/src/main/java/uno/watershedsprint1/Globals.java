@@ -1,5 +1,9 @@
 package uno.watershedsprint1;
 
+//singleton class used for Global variables, token and projectID, basic get and set
+//example usage:
+//Globals g = Globals.getInstance();
+//g.getToken();
 
 public class Globals {
     private static Globals instance;

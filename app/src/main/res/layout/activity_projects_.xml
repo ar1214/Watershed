@@ -11,14 +11,20 @@ android:background="@color/backgroundPrimary"
 tools:context="uno.watershedsprint1.Projects_Activity">
 
 
-<LinearLayout
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:background="@color/backgroundPrimary"
-    android:id="@+id/button_list">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:background="@color/backgroundPrimary"
+            android:id="@+id/button_list">
 
 
 
-</LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

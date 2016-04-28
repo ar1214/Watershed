@@ -85,7 +85,7 @@ public class MyDataActivity extends ListActivity {
 
 
         /////////////////////////////////////////////////////////////////////////////WIP
-
+        // now working, gets list of datapoints from db
         if (Looper.myLooper() == null)
         {
             Looper.prepare();
@@ -182,25 +182,96 @@ public class MyDataActivity extends ListActivity {
                 JSONObject jsonTemp = projectArray.getJSONObject(i);
                 /*JSONObject jsonTemp = new JSONObject(temp);
                 Log.d("Did it get here 333", temp);*/
-                String working = (jsonTemp.getString("project"));
-                working = working.substring(9,working.length()-2);
-                listItems.add("Project: "+working);
-                working = (jsonTemp.getString("result"));
-                if (working.equals("yes")){
-                working = "Positive";
-            }else if (working.equals("no")){
-                    working = "Negative";
+                String project = (jsonTemp.getString("project"));
+                project = project.substring(9,project.length()-2);
+                String result = (jsonTemp.getString("result"));
+
+
+                if (result.equals("yes")){
+                result = "POSITIVE";
+            }else if (result.equals("no")){
+                    result = "NEGATIVE";
                 }
                 else{
-                    working = "Not Conclusive";
+                    result = "NEUTRAL";
                 }
-                listItems.add(working);
-                listItems.add("Location (GPS):");
-                working = (jsonTemp.getString("gps_lat"));
-                listItems.add("\t\t\t\t\t\t"+working);
-                working = (jsonTemp.getString("gps_long"));
-                listItems.add("\t\t\t\t\t"+working);
-                listItems.add(" ");
+                String date = jsonTemp.getString("created_at");
+
+                // handle output if date is available, handled if date is not available in else
+                if (!date.equals("null")) {
+                    String[] dateSplit = date.split("T");
+                    date = dateSplit[0];
+                    Log.d("dateSplit0 ", dateSplit[0]);
+                    String[] newDateSplit = date.split("-");
+                    String month = newDateSplit[1];
+
+                    Log.d("dateSplit --", newDateSplit[0]);
+                    String day = newDateSplit[2];
+                    String year = newDateSplit[0];
+                    //strip leading double quote
+                    month = month.substring(1, month.length());
+                    //set month to text
+                    switch (month) {
+                        case "1":
+                            month = "January";
+                            break;
+                        case "2":
+                            month = "February";
+                            break;
+                        case "3":
+                            month = "March";
+                            break;
+                        case "4":
+                            month = "April";
+                            break;
+                        case "5":
+                            month = "May";
+                            break;
+                        case "6":
+                            month = "June";
+                            break;
+                        case "7":
+                            month = "July";
+                            break;
+                        case "8":
+                            month = "August";
+                            break;
+                        case "9":
+                            month = "September";
+                            break;
+                        case "10":
+                            month = "October";
+                            break;
+                        case "11":
+                            month = "November";
+                            break;
+                        case "12":
+                            month = "December";
+                            break;
+                        default:
+                            //if month comes back out of scope we will just print it for now
+                            break;
+                    }
+                    listItems.add("\t\t\t\t\t\t\t\t\t\t\t\t"+month+" "+day+", "+year);
+                }
+                else{
+                    //there has to be a better way to space this, but time crunch
+                    listItems.add("\t\t\t\t\t\t\t\t\t\t\t\tNO DATE AVAILABLE");
+                }
+
+                String lat = (jsonTemp.getString("gps_lat"));
+
+                //project name removed from ui, leaving this for quick addition
+
+
+                //listItems.add("Project: "+project);
+                /*listItems.add("Location (GPS):");
+                listItems.add("\t\t\t\t\t\t"+lat);
+                listItems.add("\t\t\t\t\t"+lng);
+                listItems.add(" ");*/
+                String lng = (jsonTemp.getString("gps_long"));
+                listItems.add("Lat: "+lat+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t"+result+"\nLong: "+lng);
+                listItems.add("");
 
 
 
@@ -215,7 +286,7 @@ public class MyDataActivity extends ListActivity {
 
 
 
-            //Go through json to find token, set it to Global token using singleton class Globals
+
 
             //Headers responseHeaders = response.headers();
             //debug stuff below
@@ -244,7 +315,7 @@ public class MyDataActivity extends ListActivity {
         startActivity(new Intent(MyDataActivity.this, HomePage.class));
     }
 
-
+    // more failed keyboard atttempts
     public void hideKeyboard(View view) {
         InputMethodManager inputMethodManager =(InputMethodManager)getSystemService(Activity.INPUT_METHOD_SERVICE);
         inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);

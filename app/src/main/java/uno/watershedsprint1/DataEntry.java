@@ -38,6 +38,7 @@ import com.squareup.okhttp.Request;
 import com.squareup.okhttp.RequestBody;
 import com.squareup.okhttp.Response;
 
+import org.honorato.multistatetogglebutton.MultiStateToggleButton;
 import org.json.JSONObject;
 
 import java.io.File;
@@ -71,12 +72,15 @@ public class DataEntry extends AppCompatActivity {
             }
         });
 
-       /* LocationManager myManager;
-        MyLocListener loc;
-        loc = new MyLocListener();
-        myManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-        myManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, loc);*/
 
+
+        //multistate toggle button
+
+
+        MultiStateToggleButton btnpicked = (MultiStateToggleButton) findViewById(R.id.mstb_multi_id);
+        btnpicked.setValue(1);
+
+        // Get gps button and text views where we will put the info
         button = (Button) findViewById(R.id.buttonLocation);
         latTextView = (TextView) findViewById(R.id.latitude);
         longTextView = (TextView) findViewById(R.id.longitude);
@@ -117,7 +121,8 @@ public class DataEntry extends AppCompatActivity {
         }
         else{
             //configureButton sets the listener for gps
-            configureButton();
+            locationManager.requestLocationUpdates("gps", 0, 0, locationListener);
+
         }
         ///////////////////////////////////////////////////////////////////END GPS STUFF
 
@@ -138,10 +143,30 @@ public class DataEntry extends AppCompatActivity {
 
                 EditText latitude = (EditText) findViewById(R.id.latitude);
                 EditText longitude = (EditText) findViewById(R.id.longitude);
-                RadioGroup radioGroup = (RadioGroup)findViewById(R.id.radioGroup);
-                RadioButton btnPicked;
                 EditText comment = (EditText) findViewById(R.id.comment);
                 String result;
+
+                // attempt to replace radio buttons with multistate toggle
+                // see https://github.com/jlhonora/multistatetogglebutton
+
+                MultiStateToggleButton btnpicked = (MultiStateToggleButton) findViewById(R.id.mstb_multi_id);
+                int togglestate = btnpicked.getValue();
+                Log.d("togglestate",Integer.toString(togglestate) );
+                if (togglestate == 0){
+                    result = "yes";
+                }
+                else if (togglestate ==1){
+                    result = "no";
+                }
+                else{
+                    result = "not available";
+                }
+
+
+                // the below is from when a radio group was being used, leaving for quick switch if there is any problem with the multistate toggle
+                /*RadioGroup radioGroup = (RadioGroup)findViewById(R.id.radioGroup);
+                RadioButton btnPicked;
+
                 int selectedId = radioGroup.getCheckedRadioButtonId();
                 btnPicked = (RadioButton) findViewById(selectedId);
                 String buttonString = btnPicked.getText().toString();
@@ -154,13 +179,14 @@ public class DataEntry extends AppCompatActivity {
                 }
                 else{
                     result = "not available";
-                }
+                }*/
 
 
 
 
 
-                //convert them to strings
+
+                //convert info to strings
 
                 String latitudeS = latitude.getText().toString();
                 String longitudeS = longitude.getText().toString();
@@ -172,10 +198,13 @@ public class DataEntry extends AppCompatActivity {
 
                 /// make params array
                 String[] params = {result, latitudeS, longitudeS,commentS };
-
+                Log.d("params--",params[0]+" "+params[1]+" "+params[2]+" "+params[3]);
                 //execute send
+
                 SendTask myTask = new SendTask();
                 myTask.execute(params);
+                //disable the sendbutton so multiple submits can't happen
+                sendButton.setEnabled(false);
             }
         });
 
@@ -210,7 +239,7 @@ public class DataEntry extends AppCompatActivity {
                 OkHttpClient client = new OkHttpClient();
                 //build body
                 String tok = g.getToken();
-                Log.d("WHAT IS BEING SENT", params[0]+" "+params[1]+" "+params[2]+ " "+params[3]+ " "+tok);
+               // Log.d("WHAT IS BEING SENT", params[0]+" "+params[1]+" "+params[2]+ " "+params[3]+ " "+tok);
 
                 RequestBody formBody = new FormEncodingBuilder()
                         .add("projectid", Integer.toString(g.getId()))
@@ -235,9 +264,6 @@ public class DataEntry extends AppCompatActivity {
                 try{
                     //send
                     Response response = client.newCall(request).execute();
-                    Log.d("jsonmaybe", tok+"\n"+response.body().string());
-
-
 
                     if (response.isSuccessful()){
                         worked = true;
@@ -262,19 +288,9 @@ public class DataEntry extends AppCompatActivity {
                 }
             }catch(Exception e){e.printStackTrace();}return (null);}
 
-
-
-        //wip
-       /* protected void onPostExecute(Void result){
-            authProgressDialog.dismiss();
-        }*/
-
-
-
-
     }
 
-
+    //navigation
     public void onClickToHomePage(View v){
         startActivity(new Intent(DataEntry.this, HomePage.class));
     }
@@ -284,24 +300,25 @@ public class DataEntry extends AppCompatActivity {
         switch (requestCode){
             case 10:
                 if (grantResults.length>0 && grantResults[0]== PackageManager.PERMISSION_GRANTED)
-                    configureButton();
+
                 return;
         }
     }
-    //GPS button setup
-    private void configureButton() {
+    //GPS button setup - currently removed
+    /*private void configureButton() {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
                     locationManager.requestLocationUpdates("gps", 0, 0, locationListener);
+                    button.setEnabled(false);
                 }catch(SecurityException e){e.printStackTrace();}
             }
         });
 
-    }
+    }*/
 
-
+    //sending picture to db not implemented yet, but should be in a good state to get there
     private void takePic()
     {
 

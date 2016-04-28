@@ -25,6 +25,7 @@ public class emailActivity extends AppCompatActivity {
         sendEmail = (Button) findViewById(R.id.sendEmailButton1);
         message = (EditText)findViewById(R.id.emailText);
 
+
         sendEmail.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
@@ -50,6 +51,7 @@ public class emailActivity extends AppCompatActivity {
         });
     }
 
+    //navigation
     public void onClickToHomePage(View v){
         Globals g = Globals.getInstance();
         Log.d("Token is--------", g.getToken());
@@ -60,6 +62,7 @@ public class emailActivity extends AppCompatActivity {
             startActivity(new Intent(emailActivity.this, LoginActivity.class));
         }
     }
+
 
     protected void sendEmail(String myMessage) {
 
@@ -72,6 +75,7 @@ public class emailActivity extends AppCompatActivity {
         startActivity(Intent.createChooser(emailIntent, "Email"));
     }
 
+    //haven't handled keyboard issues everywhere, this was an early attempt
     private void hideKeyboard() {
         InputMethodManager imm = (InputMethodManager)getSystemService(Activity.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(message.getWindowToken(), 0);
